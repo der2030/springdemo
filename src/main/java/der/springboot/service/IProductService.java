@@ -1,0 +1,47 @@
+package der.springboot.service;
+
+import der.springboot.entity.Products;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+
+/**
+* @FileName:IProductService
+* @Description:
+* @Author: Derrick Ye
+*/
+public interface IProductService {
+    /**
+     * return all products
+     * @return
+     */
+    public List<Products> findAll();
+
+    /**
+     * return all products with pagination
+     * @param pageable
+     * @return
+     */
+    public Page<Products> findAll(Pageable pageable);
+
+    /**
+     * save the specific product entity
+     * @param products
+     * @return
+     */
+    public Products saveProduct(Products products);
+
+    /**
+     * update the specific product
+     * @param products
+     * @return
+     */
+    public Products updateProduct(Products products);
+
+    /**
+     * delete the  product by the passed id
+     * @param id
+     */
+    public Boolean deleteProduct(Long id);
+}
