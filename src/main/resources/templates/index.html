@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org">
+<head >
+
+    <title>Spring Boot And JPA</title>
+    <th:block th:include="product/fragment/headfile :: head"></th:block>
+</head>
+<body>
+
+<div class="container">
+   <th:block th:include="product/fragment/header :: header"></th:block>
+    <div class="jumbotron">
+            <div class="row text-center">
+                <div class="">
+                    <h2>Spring Boot JPA</h2>
+
+                    <h3>Welcome,My fellows</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <img src="../../static/imgs/flow-1.png" width="400"
+                     th:src="@{/imgs/flow-1.png}"/>
+            </div>
+       </div>
+</div>
+</body>
+</html>
