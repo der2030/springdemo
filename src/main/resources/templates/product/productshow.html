@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+
+    <title>Spring Boot And JPA</title>
+    <th:block th:include="product/fragment/headfile :: head"></th:block>
+</head>
+<body>
+  <div class="container">
+	 <th:block th:include="product/fragment/header :: header"></th:block>
+	<h2>Product Details</h2>
+	<div>
+	<form  class="form-horizontal">
+
+     <div class="form-group">
+     <label  class="col-md-2 control-label">Product Id:</label>
+     <div class="col-md-10">
+     <p class="form-control-static" th:text="${product.id}">product id</p>
+     </div>
+     </div>
+      
+      <div class="form-group">
+      <label  class="col-md-2 control-label">Product Name:</label>
+      <div class="col-md-10">
+      <p class="form-control-static" th:text="${product.productname}">Product Name</p>
+      </div>
+      </div>
+
+
+     <div class="form-group">
+     <label  class="col-md-2 control-label">Product Info:</label>
+     <div class="col-md-10">
+     <p class="form-control-static" th:text="${product.productinfo}">Product Info</p>
+     </div>
+     </div>
+
+    <div class="form-group">
+        <label  class="col-md-2 control-label">Product Stock:</label>
+        <div class="col-md-10">
+            <p class="form-control-static" th:text="${product.productstock}">Product Stock</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label  class="col-md-2 control-label">Buy Price:</label>
+        <div class="col-md-10">
+            <p class="form-control-static" th:text="${product.productbuyprice}">Buy Price</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label  class="col-md-2 control-label">Sell Price:</label>
+        <div class="col-md-10">
+            <p class="form-control-static" th:text="${product.productsellprice}">Sell Price</p>
+        </div>
+    </div>
+
+     <div class="form-group">
+     <label  class="col-md-2 control-label">Discount</label>
+     <div class="col-md-10">
+     <p class="form-control-static" th:text="${product.productdiscount}">Discount</p>
+     </div>
+     </div>
+
+   
+	</form>
+	</div>
+  </div>
+</body>
+</html>
