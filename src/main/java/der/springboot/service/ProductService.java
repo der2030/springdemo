@@ -20,9 +20,13 @@ public class ProductService implements IProductService {
     @Autowired
     private ProductRepository productRepository;
 
+
     @Override
-    public List<Products> findAll() {
-        return productRepository.findAll();
+    public Products findById(Long id) {
+        if(id==null){
+            return null;
+        }
+        return productRepository.findById(id);
     }
 
     @Override
