@@ -15,4 +15,11 @@ public interface ProductRepository extends JpaRepository<Products,Long> {
      * @return
      */
     public Products findByProductname(String productname);
+
+    /**
+     * return a single product by the passed id
+     * @param id
+     * @return
+     */
+    public Products findById(Long id);
 }
