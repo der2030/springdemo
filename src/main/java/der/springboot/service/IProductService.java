@@ -13,10 +13,11 @@ import java.util.List;
 */
 public interface IProductService {
     /**
-     * return all products
+     * return a single product by the passed id
+     * @param id
      * @return
      */
-    public List<Products> findAll();
+    public Products findById(Long id);
 
     /**
      * return all products with pagination
